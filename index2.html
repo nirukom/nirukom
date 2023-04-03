@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页布局示例</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .left-sidebar {
+            width: 30%;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        .main-content {
+            width: 70%;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        /* 新添加的CSS样式规则 */
+        .left-sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .left-sidebar li {
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function changeContent(index) {
+            const content = [
+                '这是一个测试网站。',
+                '这个网站由chatgpt编写。',
+                'GPT是一位朋友，一个编程高手，一个无尽的知识源泉。'
+            ];
+            document.getElementById('main-text').innerHTML = content[index];
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="left-sidebar">
+            <ul>
+                <li><button onclick="changeContent(0)">1</button></li>
+                <li><button onclick="changeContent(1)">2</button></li>
+                <li><button onclick="changeContent(2)">3</button></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <p id="main-text">点击左侧按钮查看不同的内容。</p>
+        </div>
+    </div>
+</body>
+</html>
