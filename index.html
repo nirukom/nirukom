@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nirukom To Gpt</title>
+    <title>Mokurin To Gpt</title>
     <style>
+/* ...原始样式... */
+        #clock {
+            font-size: 48px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 20px;
+            height: 30px; /* 添加这一行，为时钟分配固定高度 */
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
@@ -16,11 +24,16 @@
             margin: 0;
             padding: 0;
             height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         h1 {
             font-size: 48px;
             margin-bottom: 20px;
+            margin-top: -50px;
         }
 
         .sidebar {
@@ -50,20 +63,45 @@
             line-height: 1.5;
             max-width: 700px;
             margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #clock {
+            font-size: 48px;
+            font-weight: bold;
+            color: #fff;
+            margin-top: 20px;
         }
 
     </style>
 </head>
 <body>
-    <h1>Nirukom To Gpt</h1>
+    <h1>Mokurin To Gpt</h1>
     <ul class="sidebar">
-        <li><a href="https://www.openai.com" target="_blank">开始</a></li>
-    <li><a href="gpt-memories.html">记录</a></li>
+        <li><a href="https://chat.openai.com/chat" target="_blank">开始</a></li>
+        <li><a href="gpt-memories.html">记录</a></li>
+        <li><a href="your-link-here.html">摘录</a></li> <!-- 添加这一行来创建新的绿色按钮 -->
     </ul>
     <div class="main">
-        <p>这是GPT为我创作的第一个网站</p>
-        <p>これは GPT が私のために作成した最初のウェブサイトです</p>
-        <p>This is the first website created by GPT for me</p>
+        <p><strong>Where Dreams Begin</strong></p>
+        <div id="clock" class="clock">00:00:00</div>
     </div>
+<script>
+    function displayRemainingTime() {
+        let now = new Date();
+        let endOfDay = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0, 0, 0);
+        let remainingTime = endOfDay - now;
+        let hours = Math.floor(remainingTime / 3600000);
+        let minutes = Math.floor((remainingTime % 3600000) / 60000);
+        let seconds = Math.floor((remainingTime % 60000) / 1000);
+        let timeString = hours.toString().padStart(2, '0') + ':' + minutes.toString().padStart(2, '0') + ':' + seconds.toString().padStart(2, '0');
+        document.getElementById('clock').innerHTML = timeString;
+    }
+    setInterval(displayRemainingTime, 1000);
+</script>
+
 </body>
 </html>

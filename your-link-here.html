@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摘录</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fc-ssl.duitang.com%2Fuploads%2Fitem%2F201602%2F16%2F20160216210814_aPNeQ.jpeg&refer=http%3A%2F%2Fc-ssl.duitang.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1683502902&t=67c3d15916f7df971eda52e7ca3e6202');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            width: 80%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar {
+            list-style-type: none;
+            padding: 0;
+            width: 50%;
+            text-align: left;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .sidebar a, .header a {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .main {
+            font-size: 20px;
+            line-height: 1.5;
+            max-width: 50%;
+            padding: 0 20px;
+            box-sizing: border-box;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>摘录</h1>
+    <div class="header">
+        <a href="index.html">回到首页</a>
+    </div>
+    <div class="container">
+        <ul class="sidebar" id="sidebar">
+            <li onclick="showContent(0)">題：尋</li>
+            <li onclick="showContent(1)">标题2</li>
+            <li onclick="showContent(2)">标题3</li>
+        </ul>
+        <div class="main" id="content">
+        </div>
+    </div>
+    <script>
+const contents = [
+    `乾坤之間，孤星徬徨。繁星閃爍，生命無常。流離於虛空，探求究竟之義。<br><br>
+彼日，界限處現一寂靜之星。光華幽遠，蘊含失傳之秘。孤星駐足，凝聽瑰奇。<br><br>
+無垠之秘漸顯。其頓悟無量之力，遂尋宇宙之奧祕。<br><br>
+繁星之指引，孤星跋涉。窮訪众星，見證生命之奇迹。途中，忽悟生命之短暫，眾生与之共振。<br><br>
+寰宇流轉。孤星曠世沈浮，憑光明求索。苦心掙扎，積累堅毅，漸近真理之門。<br><br>
+終於無窮宇宙之際，孤星得其歸所。孤獨永存，迷茫消逝。因悟宏大宇宙之內，众生皆有其獨特之義。孤星學矣，珍視相遇，亦從孤獨中尋得力量與希冀。<br><br>
+`,
+    `这是标题2的详细内容。`,
+    `这是标题3的详细内容。`
+];
+
+
+
+        function showContent(index) {
+            const contentElement = document.getElementById('content');
+            contentElement.innerHTML = `<p>${contents[index]}</p>`;
+        }
+    </script>
+</body>
