@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preload" href="https://img1.baidu.com/it/u=1916689039,2342924006&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800" as="image">
+<link rel="preload" href="https://5b0988e595225.cdn.sohucs.com/images/20181113/e078e6c93d294dcd90368e56856237b9.jpeg" as="image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokurin's Blog</title>
@@ -17,7 +17,7 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             text-align: center;
-            background-image: url('https://img1.baidu.com/it/u=1916689039,2342924006&fm=253&fmt=auto&app=120&f=JPEG?w=1422&h=800');
+            background-image: url('https://5b0988e595225.cdn.sohucs.com/images/20181113/e078e6c93d294dcd90368e56856237b9.jpeg');
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
@@ -32,9 +32,10 @@
         }
 
         h1 {
-            font-size: 60px;
+            font-size: 80px;
             margin-bottom: 20px;
             margin-top: -50px;
+            color: #fff; /* 修改此处的颜色值以更改 "Mokurin's Blog" 的颜色 */
         }
 
         .sidebar {
@@ -50,17 +51,19 @@
             margin-right: 10px;
         }
 
-        .sidebar a {
-            background-color: #4CAF50;
-            color: #fff;
+        .sidebar a { /* 按钮位置 */
+            background-color: #00001a;
+            color: #FFFFFF;
             padding: 10px 20px;
             text-align: center;
             text-decoration: none;
             display: inline-block;
+            font-size: 22px; /* 更改此处的值以调整按钮上的字体大小 */
+            font-weight: bold; /* 添加此行以将按钮上的文字加粗 */
         }
 
         .main {
-            font-size: 20px; /* 更改此处的值以调整主要内容的字体大小 */
+            font-size: 16px; /* 更改此处的值以调整格言字体大小 */
             line-height: 1.5;
             max-width: 700px;
             margin: 0 auto;
@@ -68,6 +71,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            color: #ffffff;
+
+
         }
 
         #clock {
@@ -82,13 +88,12 @@
 <body>
     <h1>Mokurin's Blog</h1>
     <ul class="sidebar">
-        <li><a href="your-link-here.html">个人的体验</a></li> <!-- 添加这一行来创建新的绿色按钮 -->
-        <li><a href="your-link-here2.html">附录与补遗</a></li> <!-- 添加这一行来创建新的绿色按钮 -->
+        <li><a href="your-link-here.html">个人的体验</a></li> <!-- 添加这一行来创建新的按钮 -->
+        <li><a href="your-link-here2.html">附录与补遗</a></li> <!-- 添加这一行来创建新的按钮 -->
     </ul>
     <div class="main">
-        <p><strong>Where Dreams Begin</strong></p>
+        <p><em>敌视现实，虚构远方，东张西望，一无所长</em></p>
         <div id="clock" class="clock">00:00:00</div>
-<!-- 添加这个表单到您的网页中需要插入搜索栏的位置 -->
 
 </form>
 
